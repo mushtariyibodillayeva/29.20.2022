@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>length</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Live Character</h1>
+      <textarea
+        placeholder="write text......"
+        onkeyup="countLetters()"
+      ></textarea>
+      <p>
+        Total text:
+        <span class="count">0</span>
+      </p>
+    </div>
+    <script>
+      const textarea = document.querySelector("textarea");
+      const count = document.querySelector(".count");
+
+      function countLetters() {
+        const textLength = textarea.value.length;
+        count.innerHTML = `${textLength}`;
+      }
+    </script>
+  </body>
+</html>
